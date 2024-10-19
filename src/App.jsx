@@ -6,9 +6,32 @@ import Allplayers from './Componnet/Allplayers'
 import AllDeveloper from './Componnet/AllDevelopers'
 import Allpost from './Componnet/Allpost'
 import Singlepost from './Componnet/Singlepost'
+import Allusers from './Componnet/Allusers'
+import Allpets from './Componnet/Allpets'
+import Tarnari from './Componnet/Tarnari'
+import Copytarnary from './Componnet/Copytarnary'
+import Child from './Componnet/Child'
 
 function App() {
   const [count, setcount] = useState(0)
+  const [test, settest] = useState(false)
+  const [child, setchild] = useState([])
+
+  console.log(child);
+
+     
+  let childfunction = (massage) => {
+    setchild(massage);
+  }
+
+
+
+  const tarnari = ()=>{
+     settest(!test)
+  }
+
+
+
 
 
   // const playercount = () => {
@@ -41,15 +64,25 @@ function App() {
 
 
 
-  const develoeprs = [
-    { name: "Azmir Uddin", selary: 18000, skils: "Front end Developer" },
-    { name: "Abduk Korim", selary: 45000, skils: "Full steack Developer" },
-    { name: "Md Saim", selary: 40000, skils: "Full steack Developer" },
-    { name: "Asif", selary: 18000, skils: "Front end Developer" },
-    { name: "Rj Sakil", selary: 16000, skils: "Front end Developer" },
-    { name: "Md Shoan", selary: 36000, skils: "Full steack Developer" },
-    { name: "Salman", selary: 19000, skils: "Front end Developer" },
+  // const develoeprs = [
+  //   { name: "Azmir Uddin", selary: 18000, skils: "Front end Developer" },
+  //   { name: "Abduk Korim", selary: 45000, skils: "Full steack Developer" },
+  //   { name: "Md Saim", selary: 40000, skils: "Full steack Developer" },
+  //   { name: "Asif", selary: 18000, skils: "Front end Developer" },
+  //   { name: "Rj Sakil", selary: 16000, skils: "Front end Developer" },
+  //   { name: "Md Shoan", selary: 36000, skils: "Full steack Developer" },
+  //   { name: "Salman", selary: 19000, skils: "Front end Developer" },
 
+  // ]
+
+
+
+  const allpets = [
+    { id: "1", Username: "Dog", Gender: "Male", Birth: "10/8/2020", Price: "200" },
+    { id: "2", Username: "Cat", Gender: "Male", Birth: "8/10/2021", Price: "" },
+    { id: "3", Username: "Pegon", Gender: "", Birth: "1/5/2024", Price: "80" },
+    { id: "4", Username: "Birth", Gender: "FeMale", Birth: "", Price: "" },
+    { id: "5", Username: "Rabbit", Gender: "", Birth: "10/8/2020", Price: "300" },
   ]
 
 
@@ -76,7 +109,21 @@ function App() {
       {/* <h1>Player List {count} </h1>
       <button onClick={() => setcount(count + 1)} > Add Player</button> */}
 
-      <Allpost></Allpost>
+      {/* <Allpost></Allpost> */}
+
+      {/* <Allusers></Allusers> */}
+
+      {/* <Allpets pets = {allpets}></Allpets> */}
+
+
+      {/* {
+
+        test? <Copytarnary></Copytarnary> :<Tarnari></Tarnari>
+      }
+
+      <button onClick={tarnari}>Click Value</button> */}
+
+      <Child transfatchild = {childfunction}></Child>
 
     </>
   )

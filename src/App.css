@@ -37,6 +37,11 @@
   padding: 2em;
 }
 
+.pets{
+  display: flex;
+  gap: 15px;
+}
+
 .read-the-docs {
   color: #888;
 }
@@ -48,4 +53,8 @@
 
 .player {
   color:rgba(0, 209, 45, 0.914)
+}
+
+.false{
+  color:red
 }
